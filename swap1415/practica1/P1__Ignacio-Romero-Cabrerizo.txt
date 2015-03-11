@@ -1,0 +1,11 @@
+Server version: Apache/2.2.22 (Ubuntu)
+Server built:   Jul 22 2014 14:37:02
+
+root      1036  0.0  0.3  34044  6896 ?        Ss   15:37   0:00 /usr/sbin/apache2 -k start
+www-data  1054  0.0  0.1  34068  3764 ?        S    15:37   0:00 /usr/sbin/apache2 -k start
+www-data  1055  0.0  0.1  34068  3764 ?        S    15:37   0:00 /usr/sbin/apache2 -k start
+www-data  1056  0.0  0.1  34068  3764 ?        S    15:37   0:00 /usr/sbin/apache2 -k start
+www-data  1057  0.0  0.1  34068  3764 ?        S    15:37   0:00 /usr/sbin/apache2 -k start
+www-data  1058  0.0  0.1  34068  3764 ?        S    15:37   0:00 /usr/sbin/apache2 -k start
+nachorc   1774  0.0  0.0   5180  1292 ?        Ss   15:40   0:00 bash -c ps aux | grep apache
+nachorc   1776  0.0  0.0   4408   820 ?        S    15:40   0:00 grep apache
