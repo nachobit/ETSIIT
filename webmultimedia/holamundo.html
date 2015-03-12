@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Documento prueba</title>
+</head>
+
+<body>
+	<h1>Hola, mundo</h1>
+
+<!--Insertar linea horizontal-->
+<hr/>
+	<!--Insertar imagen y especificar tamaño-->
+	<img src = "petter1.jpg" width="200" height="200"/ alt = "Fotografia de P.G." />
+	<img src = "dragon.jpg" width="300" height="200"/ alt = "Fotografia de P.G." />
+
+<hr/>
+	<!--Insertar enlace a otro documento-->
+	<h4>Enlazado otra web local:</h4>
+	<a href="p.html"> Pagina siguiente </a>
+	<!--Enlace web a partir de una imagen-->
+	<h4>Enlazado a web desde imagen:</h4>
+	<a href="http://www.google.es"> <img src="Google.png"> </a>
+<br/>
+<hr/>
+	<!--Enlace mismo documento-->
+	<h4>Prueba enlazado a parte 5 del documento prueba:</h2>
+	<a href="#titulo5"> Parte 5 </a>
+	
+	<!--Menu-->
+	<h3 id="titulo2"> Parte 2 </h1>
+	<br/>
+	<h3 id="titulo3"> Parte 3 </h1>
+	<h3 id="titulo4"> Parte 4 </h1>
+	<br/>
+	<h3 id="titulo5"> Parte 5 </h1>
+
+<hr/>
+
+	<!--TABLAS-->
+	<h4>Tabla horario (prueba)</h2>
+<tbody>
+<table border="1">
+	<caption>HORARIO</caption> 
+	<thead>
+	<tr>	<!--TD = CELDA 	TR = FILA-->
+		<th scope="col">Horas</th> 
+		<th colspan="2">Lunes - Martes</th>
+		<th scope="col">Miercoles</th>
+		<th scope="col">Jueves</th>
+		<th scope="col">Viernes</th>
+		<!--<thead><tfoot> -->
+	</tr>
+	<tr>
+	  <td>15:30</td>
+	  <td>CUIA</td>
+	  <td>TW</td>
+	  <td>SWAP</td>
+	  <td>TW</td>
+	  <td>TDRC</td>
+	</tr>
+	 
+	<tr>
+	  <td>17:30</td>
+	  <td>TW</td>
+	  <td>TDRC</td>
+	  <td>SM</td>
+	  <td>TW</td>
+	  <td>TDRC</td>
+	</tr>
+	 
+	<tr>
+	  <td>19:30</td>
+	  <td>SM</td>
+	  <td>CUIA</td>
+	  <td>TW</td>
+	  <td>TDRC</td>
+	  <td>SWAP</td>
+	</tr>
+</tbody>
+</table>
+
+<hr/>
+
+	<!--LISTAS-->
+<ul>
+	<li> un item </li>
+	<li> otro item </li>
+	<li> otro item</li> </ul>
+<ol>
+	<li> item 1</li>
+	<li> item 2</li>
+	<li value="33"> item 33</li> </ol>
+
+<hr/>
+
+	<!--SECCIONES-->
+<header>
+	<nav>
+		<ul>
+			<li><a href="home.html">Principal</a></li>
+			<li><a href="productos.html">Productos</a></li>
+		</ul>
+	</nav>
+</header>
+
+<hr/>
+
+	<!--REFERENCIAS-->
+<p>A quien madruga... <cite>Refran popular</cite></p>
+
+<hr/>
+
+	<!--AUDIO-->
+<audio src="M5.mp3"controls></audio>
+
+<hr/>
+
+
+	<!--FORMULARIOS-->
+	<h3>Formulario 1</h3>
+<form action="mailto:nachorc@correo.ugr.es?&subject=Asunto" enctype="text/plain"> Introduce tu nombre
+	<input type="text" name="nombre" value="" />
+	<br/>
+	<input type="submit" value="Enviar" />
+</form>
+
+	<h3>Formulario 2</h3>
+<form action="procesar.php" method="post">
+<label for="textArea1">Area de texto</label>
+<textarea id="textArea1" rows="5" cols="15"></textarea>
+</form>
+
+	<h3>Formulario 3</h3>
+<form action="procesar.php" autocomplete="on" method="post">
+	<datalist id="listaSHeroes">
+	<option value="Superman">
+	<option value="Spiderman">
+	</datalist>
+	<label for="campotexto1">Lista Superheores</label>
+	<input type="text" id="campotexto1" list="listaSHeroes">	
+</form>
+
+<hr/>
+
+</body>
+</html>
