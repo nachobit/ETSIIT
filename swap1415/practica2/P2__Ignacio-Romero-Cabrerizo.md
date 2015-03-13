@@ -28,6 +28,7 @@ ssh 10.211.55.26 -l root
 **Estando conectados a la máquina1 desde la máquina2, comprobamos que se han copiado las claves en (/root/.ssh):**
 
 root@ubuntu:~/.ssh# ls
+
 authorized_keys
 
 **Uso crontab con tarea: ejecute cada hora para manteneractualizado el contenido del directorio /var/www entre las dos máquinas (/etc/crontab):**
