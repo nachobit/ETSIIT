@@ -4,7 +4,7 @@
 
 As = Ac(n-1) + ((1 – Ac(n-1)) * Acn)
 
-
+Disponibilidad(mínimo n-1) = Dn + nD(n-1)(1-D)
 
 
 ##Ejercicio T2.2: Buscar frameworks y librerías para diferentes lenguajes que permitan hacer aplicaciones altamente disponibles con relativa facilidad. Como ejemplo, examina PM2: https://github.com/Unitech/pm2 que sirve para administrar clústeres de NodeJS.
@@ -42,11 +42,11 @@ siege -t 60s -c 100 -b -q http://localhost:8888/loadTesting/test
 
 ##Ejercicio T2.4: En este ejercicio debemos buscar diferentes tipos de productos: (1) Buscar ejemplos de balanceadores software y hardware (productos comerciales). (2) Buscar productos comerciales para servidores de aplicaciones. (3) Buscar productos comerciales para servidores de almacenamiento.
 
-1.Balanceadores:
--Barracuda (prevención intrusiones)
--Coyote Point (solución comercial económica)
--CISCO (referente en la red)
--ZEN Load (software) - NGINX (software) – HAProxy(software)
+**1.Balanceadores:**
+- Barracuda (prevención intrusiones)
+- Coyote Point (solución comercial económica)
+- CISCO (referente en la red)
+- ZEN Load (software) - NGINX (software) – HAProxy(software)
 
 **2.Servidores de aplicaciones:**
 - IBM WebSphere
@@ -56,4 +56,5 @@ siege -t 60s -c 100 -b -q http://localhost:8888/loadTesting/test
 - Borland AppServer
 
 **3.Servidores de almacenamiento:**
-
+- Servidores PowerEdge DELL
+- Servidores HP (3PAR,MSA, BURA)
