@@ -13,6 +13,7 @@ IPSec sigue una estructura similar a la siguiente:
 
 Ejemplo de aplicación para bloquear el acceso al puerto 80 de entrada permitiendo el acceso saliente TCP 80:
 - IPSeccmd.exe -w REG -p "Bloquear TCP 80 filtro" - r "bloquear entrada TCP 80 regla" -f * = 0:80:TCP - n BLOCK - x
+
 Ejemplo de regla de filtrado en el acceso entrante al puerto TCP 80 para otro filtro UDP existente:
 - IPSeccmd.exe -p "Filtro de bloque UDP 1434" -w REG - r "bloquear entrante TCP 80 Rule" -f * = 0:80:TCP - n BLOCK
 
@@ -37,6 +38,6 @@ Si queremos permitir conexiones entrantes dede páginas web:
 Igual que la anterior pero para conexiones salientes:
 - iptables -A OUTPUT -o eth0 -p tcp –sport 80 -m state –state ESTABLISHED -j ACCEPT
 
-* -A agregamos una nueva regla
-* -sport: selecciona/excluye puertos de un puerto origen determinado
-* -dport: selecciona/excluye puertos de un puerto destino determinado
+*-A agregamos una nueva regla*
+*-sport: selecciona/excluye puertos de un puerto origen determinado*
+*-dport: selecciona/excluye puertos de un puerto destino determinado*
