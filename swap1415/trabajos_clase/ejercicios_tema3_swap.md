@@ -2,8 +2,14 @@
 
 ##Ejercicio T3.1: Buscar con qué órdenes de terminal o herramientas gráficas podemos configurar bajo Windows y bajo Linux el enrutamiento del tráfico de un servidor para pasar el tráfico desde una subred a otra.
 
+Podemos crear reglas a través de IPtables de la forma:
+- iptables -t nat -A PREROUTING -p tcp --dport 2222 -j DNAT --to-destination 7.7.7.7:2222
 
+Enmascarado de la dirección IP:
+- iptables -t nat -A POSTROUTING -j MASQUERADE
 
+Podemos redireccionar el tráfiico de un parte de la red de la forma:
+- iptables -t nat -A PREROUTING -s 10.1.1.0/24 -p tcp --dport 2222 -j DNAT --to-destination 7.7.7.7:2222
 
 ##Ejercicio T3.2: Buscar con qué órdenes de terminal o herramientas gráficas podemos configurar bajo Windows y bajo Linux el filtrado y bloqueo de paquetes.
 
