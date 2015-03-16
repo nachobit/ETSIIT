@@ -8,6 +8,7 @@
 ##Ejercicio T3.2: Buscar con qué órdenes de terminal o herramientas gráficas podemos configurar bajo Windows y bajo Linux el filtrado y bloqueo de paquetes.
 
 **Para el filtrado de paquetes en Windows podemos usar la herramienta IPSec**
+
 IPSec sigue una estructura similar a la siguiente:
 - IPSeccmd.exe -w REG -p "Filtro de bloqueo ProtocolPortNumber - r "Block entrante ProtocolPortNumber regla" -f * = 0:PortNumber:Protocol - n BLOCK-x
 
@@ -39,5 +40,7 @@ Igual que la anterior pero para conexiones salientes:
 - iptables -A OUTPUT -o eth0 -p tcp –sport 80 -m state –state ESTABLISHED -j ACCEPT
 
 *-A agregamos una nueva regla*
+
 *-sport: selecciona/excluye puertos de un puerto origen determinado*
+
 *-dport: selecciona/excluye puertos de un puerto destino determinado*
