@@ -9,7 +9,7 @@ NGINX
 - wget http://nginx.org/keys/nginx_signing.key apt-key add /tmp/nginx_signing.key
 - rm -f /tmp/nginx_signing.key
 
-Para poder corroborar que el balanceador funciona correctamente, modificamos el archivo index.html en ambas máquinas virtuales para identificar el balanceo de forma más sencilla:
+NOTA: Para poder corroborar que el balanceador funciona correctamente, modificamos el archivo index.html en ambas máquinas virtuales para identificar el balanceo de forma más sencilla.
 
 **Pasos realizados en la máquina1:**
 
@@ -28,9 +28,9 @@ nano /var/www/index.html
 
 - Una vez instalado nginx procedemos a editar su archivo de configuración ubicado en: /etc/nginx/conf.d/default.conf
 
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica3/balanceador.png)
-
 - Añadimos una lína upstream con las 2 máquinas junto con los parámetros necesarios de proxy como se muestra en la imagen.
+
+![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica3/balanceador.png)
 
 
 **Comprobamos que el balanceo se realiza correctamente:**
