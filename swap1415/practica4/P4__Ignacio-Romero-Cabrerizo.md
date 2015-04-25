@@ -97,4 +97,4 @@ En la siguiente tabla se muestran los resultados obtenidos tras realizar la bate
 *Para SIEGE*
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/barra2.png)
 
-En resumen, como se puede observar en los gráficos, la granja web balanceada es capaz de realizar ***mas peticiones por segundo y en un tiempo menor***.
+En resumen, como se puede observar en los gráficos, la granja web balanceada es capaz de realizar ***más peticiones por segundo y en un tiempo menor***.
