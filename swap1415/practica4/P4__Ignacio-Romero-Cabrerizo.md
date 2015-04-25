@@ -42,9 +42,9 @@ Los valores a tener en cuenta con la herramienta ab por su interés han sido:
 La ejecución de Siege ha sido la siguiente:
  ***siege -b -t60S -v http://10.211.55.26/f.php***
 
-- b: realiza el test sin pausas
-- t60S: 60 segundos en ejecución
-- concurrencia por defecto: 15
+	-b: realiza el test sin pausas
+	-t60S: 60 segundos en ejecución
+	-concurrencia por defecto: 15
 
 Benchmarking usando la herramienta Siege:
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/siege1.png)
