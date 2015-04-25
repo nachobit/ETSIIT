@@ -26,9 +26,8 @@ La ejecución de ab es la siguiente:
 
 ***ab -n 500 -c 200 http://10.211.55.26/f.php***
 
--n 500: solicita 500 veces el script
-
--c 200: realiza las peticiones de 200 en 200 (concurrencia)
+	-n 500: solicita 500 veces el script
+	-c 200: realiza las peticiones de 200 en 200 (concurrencia)
 
 Benchmarking usando la herramienta ab:
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/ab1_mac.png)
