@@ -22,7 +22,7 @@
 ### Batería de pruebas ###
 **Servidor Solo**
 
-La ejecución de ab es la siguiente:
+La ejecución de ab ha sido la siguiente:
 
 ***ab -n 500 -c 200 http://10.211.55.26/f.php***
 
@@ -62,8 +62,8 @@ En la siguiente tabla se muestran los resultados obtenidos tras realizar la bate
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/ssolo.png)
 
 
-*Batería de pruebas*
-- Granja WEB con NGINX
+### Batería de pruebas ###
+**Granja WEB con NGINX**
 
 La ejecución de ab ha sido la siguiente:
 ***ab -n 500 -c 200 http://10.211.55.28/f.php***
@@ -71,29 +71,30 @@ La ejecución de ab ha sido la siguiente:
 La ejecución de siege ha sido la siguiente:
 ***siege -b -t60S -v http://10.211.55.28/f.php***
 
-En la siguiente tabla se muestran los resultados obtenidos tras realizar la batería de pruebas en el servidor 10 veces:
+En la siguiente tabla se muestran los resultados obtenidos tras realizar la batería de pruebas en la granja web 10 veces:
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/nginx.png)
 
-
-*Batería de pruebas*
-- Granja WEB con HAPROXY
+### Batería de pruebas ###
+**Granja WEB con HAPROXY**
 
 La ejecución de ab ha sido la siguiente:
+
 ***ab -n 500 -c 200 http://10.211.55.28/f.php***
 
 La ejecución de siege ha sido la siguiente:
-*** iege -b -t60S -v http://10.211.55.28/f.php***
 
-En la siguiente tabla se muestran los resultados obtenidos tras realizar la batería de pruebas en el servidor 10 veces:
+***siege -b -t60S -v http://10.211.55.28/f.php***
+
+En la siguiente tabla se muestran los resultados obtenidos tras realizar la batería de pruebas en la granja web 10 veces:
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/haproxy.png)
 
 
-##Aquí se muestran los gráficos resultantes con la MEDIA para los atributos seleccionados (antes mencionados) a analizar: ##
+###Aquí se muestran los gráficos resultantes con la MEDIA para los atributos seleccionados (antes mencionados) a analizar: ###
 
-*ab*
+*Para ab:*
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/barra1.png)
 
-*SIEGE*
+*Para SIEGE*
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/barra2.png)
 
-En resumen, como se puede observar en los gráficos, la granja web balanceada es capaz de realizar mas peticiones por segundo y en un tiempo menor.
+En resumen, como se puede observar en los gráficos, la granja web balanceada es capaz de realizar ***mas peticiones por segundo y en un tiempo menor***.
