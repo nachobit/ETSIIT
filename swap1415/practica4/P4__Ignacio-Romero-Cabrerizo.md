@@ -50,10 +50,10 @@ Benchmarking usando la herramienta Siege:
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/siege1.png)
 
 Los valores a tener en cuenta con la herramienta ab por su interés han sido:
-	* Elapsed Time
-	* Response Time
-	* Transaction Rate
-	* Longest Transaction
+* Elapsed Time
+* Response Time
+* Transaction Rate
+* Longest Transaction
 
 Por tanto, usando una concurrencia de 15 usuarios(valor por defecto) tras la ejecución durante 60 segundos como se muestra en la anterior captura, obtenemos los siguientes resultados:
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/siege2.png)
