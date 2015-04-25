@@ -1,4 +1,4 @@
-#Practica 4
+#Practica 4#
 
 ## COMPROBAR EL RENDIMIENTO DE SERVIDORES WEB ##
 
@@ -23,7 +23,7 @@
 **Servidor Solo**
 
 La ejecución de ab es la siguiente:
- *** ab -n 500 -c 200 http://10.211.55.26/f.php ***
+ ***ab -n 500 -c 200 http://10.211.55.26/f.php***
 
  -n 500: solicita 500 veces el script
  -c 200: realiza las peticiones de 200 en 200 (concurrencia)
@@ -38,7 +38,7 @@ Los valores a tener en cuenta con la herramienta ab por su interés han sido:
 	* Time per request
 
 La ejecución de Siege ha sido la siguiente:
- *** siege -b -t60S -v http://10.211.55.26/f.php ***
+ ***siege -b -t60S -v http://10.211.55.26/f.php***
 
  -b: realiza el test sin pausas
  -t60S: 60 segundos en ejecución
@@ -65,10 +65,10 @@ En la siguiente tabla se muestran los resultados obtenidos tras realizar la bate
 - Granja WEB con NGINX
 
 La ejecución de ab ha sido la siguiente:
- *** ab -n 500 -c 200 http://10.211.55.28/f.php ***
+ ***ab -n 500 -c 200 http://10.211.55.28/f.php***
 
 La ejecución de siege ha sido la siguiente:
- *** siege -b -t60S -v http://10.211.55.28/f.php ***
+ ***siege -b -t60S -v http://10.211.55.28/f.php***
 
 En la siguiente tabla se muestran los resultados obtenidos tras realizar la batería de pruebas en el servidor 10 veces:
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/nginx.png)
@@ -78,10 +78,10 @@ En la siguiente tabla se muestran los resultados obtenidos tras realizar la bate
 - Granja WEB con HAPROXY
 
 La ejecución de ab ha sido la siguiente:
- *** ab -n 500 -c 200 http://10.211.55.28/f.php ***
+ ***ab -n 500 -c 200 http://10.211.55.28/f.php***
 
 La ejecución de siege ha sido la siguiente:
- *** siege -b -t60S -v http://10.211.55.28/f.php ***
+ *** iege -b -t60S -v http://10.211.55.28/f.php***
 
 En la siguiente tabla se muestran los resultados obtenidos tras realizar la batería de pruebas en el servidor 10 veces:
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/haproxy.png)
