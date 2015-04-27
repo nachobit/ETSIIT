@@ -14,7 +14,7 @@ Las granjas web aún así, no llegan a tener los niveles de confiabilidad de los
 |----------------------------------|---------|-----------------------------------------------------|-------------------------------------------------------|
 | Cisco ACE (4710)                 | 10.000€ | Detección servicios/máquinas defectuosos            | Sticky Groups: (asociación usuario-servidor concreto) |
 |                                  |         | Mejora la escalabilidad (hasta 4Gbps)               | Aceleración                                           |
-| F5 Networks Big-IP 2000          | 15000€  | Local Traffic Manager (ataques DDoS)                | Aceleración SSL                                       |
+| F5 Networks Big-IP 2000          | 15.000€  | Local Traffic Manager (ataques DDoS)                | Aceleración SSL                                       |
 |                                  |         | Eliminación de puntos únicos de fallo               | Rastrea niveles dinámicos de servidores en grupo      |
 | Nortel Alteon Load Balancer 5412 | 16.000€ | Aislamiento de fallos (vADC por aplicación)         | AppWall Web Application Firewall (WAF)                |
 |                                  |         | Monitoreo en tiempo real - gestión de SLA proactiva | FastView Web Performance Optimization (WPO)           |
