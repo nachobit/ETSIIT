@@ -2,12 +2,22 @@
 
 ##Ejercicio T4.1: Buscar información sobre cuánto costaría en la actualidad un mainframe. Comparar precio y potencia entre esa máquina y una granja web de unas prestaciones similares.
 
-En la actualidad se utilizan cada vez más los servicios de web, mail y cloud (nube), servicios que el usuario exige que sean rápidos, fiables e ininterrumpidos. 
+En la actualidad se utilizan cada vez más los servicios de web, mail y cloud (nube), servicios que el usuario exige que sean rápidos, fiables e ininterrumpidos.
 Los mainframe poseen súper procesadores con un gran poder de cálculo pero requieren una gran inversión y no prestan las características de los clústeres y la computación paralela (brindan múltiples peticiones a los usuarios en servicios web sin retardo y de una forma eficiente) ni su reducido coste y alto desempeño.
 
 Las granjas web aún así, no llegan a tener los niveles de confiabilidad de los mainframes.
 
 ##Ejercicio T4.2: Buscar información sobre precio y características de balanceadores hardware específicos. Compara las prestaciones que ofrecen unos y otros.
+
+
+| Balanceador                      | Precio  | Características                                                                                             |
+|----------------------------------|---------|-----------------------------------------------------|-------------------------------------------------------|
+| Cisco ACE (4710)                 | 10.000€ | Detección servicios/máquinas defectuosos            | Sticky Groups: (asociación usuario-servidor concreto) |
+|                                  |         | Mejora la escalabilidad (hasta 4Gbps)               | Aceleración                                           |
+| F5 Networks Big-IP 2000          | 15000€  | Local Traffic Manager (ataques DDoS)                | Aceleración SSL                                       |
+|                                  |         | Eliminación de puntos únicos de fallo               | Rastrea niveles dinámicos de servidores en grupo      |
+| Nortel Alteon Load Balancer 5412 | 16.000€ | Aislamiento de fallos (vADC por aplicación)         | AppWall Web Application Firewall (WAF)                |
+|                                  |         | Monitoreo en tiempo real - gestión de SLA proactiva | FastView Web Performance Optimization (WPO)           |
 
 
 ##Ejercicio T4.3: Buscar información sobre los métodos de balanceo que implementan los dispositivos recogidos en el ejercicio 4.2
