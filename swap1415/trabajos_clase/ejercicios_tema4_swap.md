@@ -10,7 +10,7 @@ Las granjas web aún así, no llegan a tener los niveles de confiabilidad de los
 ##Ejercicio T4.2: Buscar información sobre precio y características de balanceadores hardware específicos. Compara las prestaciones que ofrecen unos y otros.
 
 
-| Balanceador                      | Precio  | Características                                                                                             |
+| Balanceador                      | Precio  | Características                                     |                                                       |
 |----------------------------------|---------|-----------------------------------------------------|-------------------------------------------------------|
 | Cisco ACE (4710)                 | 10.000€ | Detección servicios/máquinas defectuosos            | Sticky Groups: (asociación usuario-servidor concreto) |
 |                                  |         | Mejora la escalabilidad (hasta 4Gbps)               | Aceleración                                           |
@@ -36,38 +36,3 @@ Las granjas web aún así, no llegan a tener los niveles de confiabilidad de los
 
 
 ##Ejercicio T4.7: Buscar información sobre métodos y herramientas para implementar GSLB.
-
-
-
-
-
-
-
-
-
-
-
-*iptables usa la siguiente estructura:*
-
-iptables [-t nombre-tabla] <comando> <nombre-cadena> <parametro 1> \ <opcion1>
-
-Ejemplo de aplicación de un filtrado a un puerto determinado (2222):
-- iptables -A INPUT -p tcp –sport 2222
-
-Ejemplo de bloqueo de tráfico procedente de un rango IP:
-- iptables -A INPUT -p tcp -m iprange –src-range 192.168.1.13-192.168.2.19
-
-Ejemplo de bloqueo de MAC:
-- iptables -A INPUT -m mac –mac-source 00:00:00:00:00:01
-
-Si queremos permitir conexiones entrantes dede páginas web:
-- iptables -A INPUT -i eth0 -p tcp –dport 80 -m state –state NEW,ESTABLISHED -j ACCEPT
-
-Igual que la anterior pero para conexiones salientes:
-- iptables -A OUTPUT -o eth0 -p tcp –sport 80 -m state –state ESTABLISHED -j ACCEPT
-
-*-A agregamos una nueva regla*
-
-*-sport: selecciona/excluye puertos de un puerto origen determinado*
-
-*-dport: selecciona/excluye puertos de un puerto destino determinado*
