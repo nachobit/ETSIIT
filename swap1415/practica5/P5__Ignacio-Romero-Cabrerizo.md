@@ -12,11 +12,13 @@
 ***mysql -u root –p***
 
 - En el caso de no tener una, comenzamos creando una base de datos "contactos" por ejemplo, en la máquina 1 y una tabla "datos" con 2 campos (nombre y teléfono):
-	mysql> CREATE database contactos;
-	mysql> use contactos;
-	mysql> CREATE table datos(nombre varchar(100),tlf int);
+
+	-mysql> CREATE database contactos;
+	-mysql> use contactos;
+	-mysql> CREATE table datos(nombre varchar(100),tlf int);
 
 - Procedemos a insertar una fila nueva:
+
 	-mysql> INSERT INTO datos(nombre,tlf) VALUES ("pepe",95834987);
 
 Como resultado obtendremos lo siguiente:
@@ -24,12 +26,14 @@ Como resultado obtendremos lo siguiente:
 
 ###COPIA DE BASE DE DATOS###
 - Antes de pasar a realizar el backup con mysqldump debemos bloquear las tablas para evitar que se acceda a la base de datos si ésta se estáactualizando en el servidor, para ello:
+
 	-mysql> FLUSH tables WITH READ LOCK;
 
 - Pasamos a realizar, ahora sí, la copia de nuestra base de datos:
 ***mysqldump contactos -u root -p > /root/contacto.sql***
 
 - Desbloqueamos las tablas:
+
 	-mysql> UNLOCK TABLES; 
 	-mysql> quit
 
@@ -44,6 +48,7 @@ Como resultado obtendremos lo siguiente:
 
 ###CONFIGURACION MAESTRO/ESCLAVO PARTE 1###
 ##MAESTRO##
+
 - En la **máquina 1** (Maestro) debemos realizar la siguiente modificación en el archivo de configuración **my.cnf**: 
 ***/etc/mysql/my.cnf***
 
@@ -68,7 +73,9 @@ Como resultado obtendremos lo siguiente:
 
 ###CONFIGURACION MAESTRO/ESCLAVO PARTE 2###
 ##MAESTRO##
+
 * Si no hemos obtenido ningún error en la configuración del archivo **my.cnf** de ambas máquinas, pasamos a crear un usuario y darle permisos de acceso para la replicación de la base de datos:
+
 	-mysql> CREATE USER esclavo IDENTIFIED BY 'esclavo';
 	-mysql> GRANT REPLICATION SLAVE ON *.* TO 'esclavo'@'%' IDENTIFIED BY 'esclavo';
 	-mysql> FLUSH PRIVILEGES;
@@ -81,7 +88,9 @@ Como resultado obtendremos lo siguiente:
 La última sentencia nos permite obtener los datos de la base de datos a replicar para usarlos en la configuración del esclavo.
 
 ##ESCLAVO##
+
 - Pasamos los datos del maestro al esclavo:
+
 	-mysql> CHANGE MASTER TO MASTER_HOST='IP_MAESTRO', 
 	MASTER_USER='esclavo', MASTER_PASSWORD='esclavo', 
 	MASTER_LOG_FILE='mysql-bin.000001', MASTER_LOG_POS=501, MASTER_PORT=3306;
@@ -89,12 +98,15 @@ La última sentencia nos permite obtener los datos de la base de datos a replica
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/esclavo2.png)
 
 - Finalmente arrancamos el esclavo:
+
 	-mysql> START SLAVE;
 
 - En el **Maestro** activamos de nuevo las tablas bloqueadas:
+
 	-mysql> UNLOCK TABLES;
 
 - Para comprobar que el esclavo no se ha creado con errores y que todo funciona correctamente, ejectucamos la siguiente orden:
+
 	-mysql> SHOW SLAVE STATUS\G
 
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/esclavo3.png)
