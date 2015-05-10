@@ -118,7 +118,7 @@ La última sentencia nos permite obtener los datos de la base de datos a replica
 
 	`mysql> UNLOCK TABLES;`
 
-- Para comprobar que el esclavo no se ha creado con errores y que todo funciona correctamente, ejectucamos la siguiente orden:
+- Para comprobar que el esclavo no se ha creado con errores y que todo funciona correctamente, ejecutamos la siguiente orden:
 
 	`mysql> SHOW SLAVE STATUS\G`
 
