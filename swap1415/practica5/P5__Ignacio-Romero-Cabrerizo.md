@@ -13,9 +13,9 @@
 
 - En el caso de no tener una, comenzamos creando una base de datos "contactos" por ejemplo, en la máquina 1 y una tabla "datos" con 2 campos (nombre y teléfono):
 
-	`mysql> CREATE database contactos;
+	`mysql> CREATE database contactos;`
 	
-	mysql> use contactos;
+	`mysql> use contactos;`
 	
 	mysql> CREATE table datos(nombre varchar(100),tlf int);`
 
