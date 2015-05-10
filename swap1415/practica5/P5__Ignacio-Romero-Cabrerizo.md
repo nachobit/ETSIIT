@@ -50,7 +50,7 @@ Como resultado obtendremos lo siguiente:
 	`mysql> quit`
 
 ##CONFIGURACION MAESTRO/ESCLAVO PARTE 1##
-###MAESTRO###
+####MAESTRO###
 
 - En la **máquina 1** (Maestro) debemos realizar la siguiente modificación en el archivo de configuración **my.cnf**: 
 
@@ -66,7 +66,7 @@ Como resultado obtendremos lo siguiente:
 
 ***/etc/init.d/mysql restart***
 
-###ESCLAVO###
+####ESCLAVO###
 - En la **máquina 2** (Esclavo) debemos realizar la siguiente modificación en el archivo de configuración **my.cnf**: 
 
 ***/etc/mysql/my.cnf***
@@ -80,22 +80,27 @@ Como resultado obtendremos lo siguiente:
 ***/etc/init.d/mysql restart***
 
 ##CONFIGURACION MAESTRO/ESCLAVO PARTE 2##
-##MAESTRO##
+####MAESTRO##
 
 * Si no hemos obtenido ningún error en la configuración del archivo **my.cnf** de ambas máquinas, pasamos a crear un usuario y darle permisos de acceso para la replicación de la base de datos:
 
 	> `mysql> CREATE USER esclavo IDENTIFIED BY 'esclavo';`
+	
 	> `mysql> GRANT REPLICATION SLAVE ON *.* TO 'esclavo'@'%' IDENTIFIED BY 'esclavo';`
+	
 	> `mysql> FLUSH PRIVILEGES;`
+	
 	> `mysql> FLUSH TABLES;`
+	
 	> `mysql> FLUSH TABLES WITH READ LOCK;`
+	
 	> `mysql> SHOW MASTER STATUS;`
 
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/maestro3.png)
 
 La última sentencia nos permite obtener los datos de la base de datos a replicar para usarlos en la configuración del esclavo.
 
-###ESCLAVO###
+####ESCLAVO###
 
 - Pasamos los datos del maestro al esclavo:
 
