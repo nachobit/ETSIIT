@@ -4,15 +4,17 @@
 
 ### Pasos iniciales: ###
 
-- Para conseguir una copia de nuestra base de datos cuando ésta contiene gran cantidad de información y datos, vamos a hacer uso de mysqldump, configurando 2 máquinas como Maestro-Esclavo.
+- Para conseguir una copia de nuestra base de datos cuando ésta contiene gran cantidad de información y datos, vamos a hacer uso de **mysqldump**, configurando 2 máquinas como *Maestro-Esclavo*.
+
 - En nuestro caso la máquina 1 será el maestro y la máquina 2 el esclavo.
+
 - Para realizar las consultas accederemos a mysql de la siguiente forma:
 ***mysql -u root –p***
 
-- En el caso de no tener una, comenzamos creando una base de datos "contactos" en la máquina 1 y una tabla "datos" con 2 campos (nombre y teléfono):
-	-mysql> CREATE database contactos;
-	-mysql> use contactos;
-	-mysql> CREATE table datos(nombre varchar(100),tlf int);
+- En el caso de no tener una, comenzamos creando una base de datos "contactos" por ejemplo, en la máquina 1 y una tabla "datos" con 2 campos (nombre y teléfono):
+	mysql> CREATE database contactos;
+	mysql> use contactos;
+	mysql> CREATE table datos(nombre varchar(100),tlf int);
 
 - Procedemos a insertar una fila nueva:
 	-mysql> INSERT INTO datos(nombre,tlf) VALUES ("pepe",95834987);
