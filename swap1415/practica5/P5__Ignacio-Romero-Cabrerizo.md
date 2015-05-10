@@ -32,6 +32,7 @@ Como resultado obtendremos lo siguiente:
 	`mysql> FLUSH tables WITH READ LOCK;`
 
 - Pasamos a realizar, ahora sí, la copia de nuestra base de datos:
+
 ***mysqldump contactos -u root -p > /root/contacto.sql***
 
 - Desbloqueamos las tablas:
@@ -52,6 +53,7 @@ Como resultado obtendremos lo siguiente:
 ##MAESTRO##
 
 - En la **máquina 1** (Maestro) debemos realizar la siguiente modificación en el archivo de configuración **my.cnf**: 
+
 ***/etc/mysql/my.cnf***
 
 * Comentar el parámetro de escucha de servidor:
@@ -61,16 +63,20 @@ Como resultado obtendremos lo siguiente:
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/maestro2.png)
 
 * Guardar el archivo sobreescribiendo y reiniciar el servicio:
+
 ***/etc/init.d/mysql restart***
 
 ##ESCLAVO##
 - En la **máquina 2** (Esclavo) debemos realizar la siguiente modificación en el archivo de configuración **my.cnf**: 
+
 ***/etc/mysql/my.cnf***
 * Comentar el parámetro de escucha de servidor
+
 * Establecer el identificador del servidor:
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/esclavo1.png)
 
 * Guardar el archivo sobreescribiendo y reiniciar el servicio:
+
 ***/etc/init.d/mysql restart***
 
 ###CONFIGURACION MAESTRO/ESCLAVO PARTE 2###
@@ -78,12 +84,12 @@ Como resultado obtendremos lo siguiente:
 
 * Si no hemos obtenido ningún error en la configuración del archivo **my.cnf** de ambas máquinas, pasamos a crear un usuario y darle permisos de acceso para la replicación de la base de datos:
 
-	`mysql> CREATE USER esclavo IDENTIFIED BY 'esclavo';
-	mysql> GRANT REPLICATION SLAVE ON *.* TO 'esclavo'@'%' IDENTIFIED BY 'esclavo';
-	mysql> FLUSH PRIVILEGES;
-	mysql> FLUSH TABLES;
-	mysql> FLUSH TABLES WITH READ LOCK;
-	mysql> SHOW MASTER STATUS;`
+	> `mysql> CREATE USER esclavo IDENTIFIED BY 'esclavo';
+	> mysql> GRANT REPLICATION SLAVE ON *.* TO 'esclavo'@'%' IDENTIFIED BY 'esclavo';
+	> mysql> FLUSH PRIVILEGES;
+	> mysql> FLUSH TABLES;
+	> mysql> FLUSH TABLES WITH READ LOCK;
+	> mysql> SHOW MASTER STATUS;`
 
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/maestro3.png)
 
@@ -105,7 +111,7 @@ La última sentencia nos permite obtener los datos de la base de datos a replica
 
 - En el **Maestro** activamos de nuevo las tablas bloqueadas:
 
-	-mysql> UNLOCK TABLES;
+	`mysql> UNLOCK TABLES;`
 
 - Para comprobar que el esclavo no se ha creado con errores y que todo funciona correctamente, ejectucamos la siguiente orden:
 
