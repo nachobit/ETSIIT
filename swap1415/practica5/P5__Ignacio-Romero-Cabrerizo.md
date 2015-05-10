@@ -16,7 +16,6 @@
 	>`mysql> CREATE database contactos;`
 	
 	`mysql> use contactos;`
-	
 	`mysql> CREATE table datos(nombre varchar(100),tlf int);`
 
 - Procedemos a insertar una fila nueva:
