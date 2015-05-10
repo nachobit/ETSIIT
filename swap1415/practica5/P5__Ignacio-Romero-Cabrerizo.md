@@ -13,13 +13,13 @@
 
 - En el caso de no tener una, comenzamos creando una base de datos "contactos" por ejemplo, en la máquina 1 y una tabla "datos" con 2 campos (nombre y teléfono):
 
-	`mysql> CREATE database contactos;`
+	`mysql> CREATE database contactos;
 	mysql> use contactos;
-	mysql> CREATE table datos(nombre varchar(100),tlf int);
+	mysql> CREATE table datos(nombre varchar(100),tlf int);`
 
 - Procedemos a insertar una fila nueva:
 
-	-mysql> INSERT INTO datos(nombre,tlf) VALUES ("pepe",95834987);
+	`mysql> INSERT INTO datos(nombre,tlf) VALUES ("pepe",95834987);`
 
 Como resultado obtendremos lo siguiente:
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/maestro0.png)
@@ -27,15 +27,15 @@ Como resultado obtendremos lo siguiente:
 ###COPIA DE BASE DE DATOS###
 - Antes de pasar a realizar el backup con mysqldump debemos bloquear las tablas para evitar que se acceda a la base de datos si ésta se estáactualizando en el servidor, para ello:
 
-	-mysql> FLUSH tables WITH READ LOCK;
+	`mysql> FLUSH tables WITH READ LOCK;`
 
 - Pasamos a realizar, ahora sí, la copia de nuestra base de datos:
 ***mysqldump contactos -u root -p > /root/contacto.sql***
 
 - Desbloqueamos las tablas:
 
-	-mysql> UNLOCK TABLES; 
-	-mysql> quit
+	`mysql> UNLOCK TABLES; 
+	 mysql> quit`
 
 - En la **máquina 2** mediante el protocolo de transferencia SCP, obtenemos el archivo creado por mysqldump en la máquina 1:
 
@@ -43,8 +43,8 @@ Como resultado obtendremos lo siguiente:
 
 - Debemos crear la base de datos en la **máquina 2** antes de realizar la restauración o copia desde el archivo sql creado:
 
-	-mysql> CREATE database contactos;
-	-mysql> quit
+	`mysql> CREATE database contactos;
+	`mysql> quit
 
 ###CONFIGURACION MAESTRO/ESCLAVO PARTE 1###
 ##MAESTRO##
