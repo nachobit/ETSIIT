@@ -13,7 +13,7 @@
 
 ###CONFIGURACION DEL RAID###
 
-- Tras arrancar la máquina 1 lo primero es instalar el software necesario para configurar el RAID, en este caso será mediante la utilidad **mdadm.
+- Tras arrancar la máquina 1 lo primero es instalar el software necesario para configurar el RAID, en este caso será mediante la utilidad **mdadm**.
 
 	`sudo apt-get install mdadm`
 
