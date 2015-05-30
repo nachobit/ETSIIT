@@ -34,6 +34,7 @@
 - Creamos el directorio donde se montará la unidad de RAID:
 
 	`sudo mkdir /datos`
+
 	`sudo mount /dev/md0 /datos`
 
 - Comprobamos el estado del RAID:
@@ -42,7 +43,7 @@
 
 ![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica6/res.png)
 
-- Por último configuramos el sistema para que monte el RAID al arrancar el sistema mediante la edición del archivo /etc/fstab:
+- Por último configuramos el sistema para que monte el RAID al arrancar el sistema mediante la edición del archivo **/etc/fstab**:
 
 1. Obtenemos el UUID del RAID con blkid:
 
