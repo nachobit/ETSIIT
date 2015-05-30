@@ -11,7 +11,7 @@ Por otro lado existen herramientas (ab, siege...) que permiten simular conexione
 
 ##Ejercicio 5.2: Instalar wireshark y observar cómo fluye el tráfico de red en uno de los servidores web mientras se le hacen peticiones HTTP.##
 
-
+![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/trabajos_clase/wire.gif)
 
 
 ##Ejercicio 5.3: Buscar información sobre características, disponibilidad para diversos SO, etc de herramientas para monitorizar las prestaciones de un servidor.##
