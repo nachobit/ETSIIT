@@ -55,10 +55,10 @@ Costo total: 195€ / MES
  - El coste para un uso del 10%/Mensual: 19,8€
 
 ###Ejercicio 3: 
-##1.- ¿Qué tipo de virtualización usarías en cada caso?
+###1.- ¿Qué tipo de virtualización usarías en cada caso?
  -- Comentado en el foro (https://github.com/JJ/IV-2015-16/issues/1).
 
-##2.- Crear un programa simple en cualquier lenguaje interpretado para Linux, empaquetarlo con CDE y probarlo en diferentes distribuciones.
+###2.- Crear un programa simple en cualquier lenguaje interpretado para Linux, empaquetarlo con CDE y probarlo en diferentes distribuciones.
 
  1. Instalamos CDE: sudo apt-get install cde
  2. Ejecutamos la orden: cde python adivina.py
@@ -66,4 +66,16 @@ Costo total: 195€ / MES
  4. Ejecutamos la orden: ./python.cde adivina.py
  5. Probamos en otras distros
 
-###Ejercicio 4: 
+![img](https://github.com/nachobit/ETSIIT/blob/master/IV1516/ejercicios/tema1/ub.png)
+
+![img](https://github.com/nachobit/ETSIIT/blob/master/IV1516/ejercicios/tema1/ub1.png)
+
+###Ejercicio 5: 
+
+###Ejercicio 5.1: Comprobar si el núcleo instalado en tu ordenador contiene este módulo del kernel usando la orden kvm-ok.
+
+Tras instalar el componente necesario: sudo apt-get install cpu-checker en mi máquina Ubuntu Server no está presente: *KVM acceleration can NOT be used*
+
+###Ejercicio 5.2: Instalar un hipervisor para gestionar máquinas virtuales, que más adelante se podrá usar en pruebas y ejercicios.
+
+Dispongo de Parallels y VirtualBox instalados en el PC.
