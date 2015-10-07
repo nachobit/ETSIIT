@@ -16,13 +16,13 @@ Producto:
  
 PRECIO SIN IVA (21%): 1184,21€
 
-#Amortización a 4 años (25% por año)
+*Amortización a 4 años (25% por año)*
  - 2015: 1184,21€ * 0.25 = 296€
  - 2016: 1184,21€ * 0.25 = 296€
  - 2017: 1184,21€ * 0.25 = 296€
  - 2018: 1184,21€ * 0.25 = 296€
 
-#Amortización a 7 años (25% los 2 primeros años y gradual los siguientes)
+*Amortización a 7 años (25% los 2 primeros años y gradual los siguientes)*
 
 1184,21 * 0. = 296€
 1184,21 * 0.25 = 296€
