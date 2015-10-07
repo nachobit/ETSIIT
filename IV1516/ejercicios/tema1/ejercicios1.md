@@ -54,10 +54,11 @@ Costo total: 195€ / MES
  - El coste para un uso del 1%/Mensual: 2,1€
  - El coste para un uso del 10%/Mensual: 19,8€
 
-###Ejercicio 3: 1.- ¿Qué tipo de virtualización usarías en cada caso?
+###Ejercicio 3: 
+##1.- ¿Qué tipo de virtualización usarías en cada caso?
  -- Comentado en el foro (https://github.com/JJ/IV-2015-16/issues/1).
 
-2.- Crear un programa simple en cualquier lenguaje interpretado para Linux, empaquetarlo con CDE y probarlo en diferentes distribuciones.
+##2.- Crear un programa simple en cualquier lenguaje interpretado para Linux, empaquetarlo con CDE y probarlo en diferentes distribuciones.
 
  1. Instalamos CDE: sudo apt-get install cde
  2. Ejecutamos la orden: cde python adivina.py
