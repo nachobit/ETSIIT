@@ -24,7 +24,7 @@
 	`mysql> INSERT INTO datos(nombre,tlf) VALUES ("pepe",95834987);`
 
 Como resultado obtendremos lo siguiente:
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/maestro0.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica5/maestro0.png)
 
 ###COPIA DE BASE DE DATOS###
 - Antes de pasar a realizar el backup con mysqldump debemos bloquear las tablas para evitar que se acceda a la base de datos si ésta se estáactualizando en el servidor, para ello:
@@ -57,10 +57,10 @@ Como resultado obtendremos lo siguiente:
 ***/etc/mysql/my.cnf***
 
 * Comentar el parámetro de escucha de servidor:
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/maestro1.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica5/maestro1.png)
 
 * Establecer el identificador del servidor (Maestro será el 1 y Esclavo será el 2) y el registro binario (contiene toda la información del registro de actualizaciones):
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/maestro2.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica5/maestro2.png)
 
 * Guardar el archivo sobreescribiendo y reiniciar el servicio:
 
@@ -73,7 +73,7 @@ Como resultado obtendremos lo siguiente:
 * Comentar el parámetro de escucha de servidor
 
 * Establecer el identificador del servidor:
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/esclavo1.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica5/esclavo1.png)
 
 * Guardar el archivo sobreescribiendo y reiniciar el servicio:
 
@@ -96,7 +96,7 @@ Como resultado obtendremos lo siguiente:
 	
 	> `mysql> SHOW MASTER STATUS;`
 
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/maestro3.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica5/maestro3.png)
 
 La última sentencia nos permite obtener los datos de la base de datos a replicar para usarlos en la configuración del esclavo.
 
@@ -108,7 +108,7 @@ La última sentencia nos permite obtener los datos de la base de datos a replica
 	`MASTER_USER='esclavo', MASTER_PASSWORD='esclavo', `
 	`MASTER_LOG_FILE='mysql-bin.000001', MASTER_LOG_POS=501, MASTER_PORT=3306;`
 
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/esclavo2.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica5/esclavo2.png)
 
 - Finalmente arrancamos el esclavo:
 
@@ -122,11 +122,11 @@ La última sentencia nos permite obtener los datos de la base de datos a replica
 
 	`mysql> SHOW SLAVE STATUS\G`
 
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/esclavo3.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica5/esclavo3.png)
 
 y verificamos que el valor de la variable *Seconds_Behind_Master* es 0.
 
 
 Para acabar, insertamos una nueva fila en nuestra tabla "contactos" de la máquina *Maestro* para corroborar que los cambios se realizan por igual en nuestra máquina *Esclavo*:
 
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica5/final.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica5/final.png)

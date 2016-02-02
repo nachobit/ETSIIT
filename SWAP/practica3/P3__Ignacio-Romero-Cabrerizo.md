@@ -15,13 +15,13 @@ NOTA: Para poder corroborar que el balanceador funciona correctamente, modificam
 
 nano /var/www/index.html
 
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica3/us1.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica3/us1.png)
 
 **Pasos realizados en la máquina2:**
 
 nano /var/www/index.html
 
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica3/us2.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica3/us2.png)
 
 
 **Pasos realizados en la máquina Balanceador:**
@@ -30,11 +30,11 @@ nano /var/www/index.html
 
 - Añadimos una lína upstream con las 2 máquinas junto con los parámetros necesarios de proxy como se muestra en la imagen.
 
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica3/balanceador.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica3/balanceador.png)
 
 
 **Comprobamos que el balanceo se realiza correctamente:**
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica3/check.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica3/check.png)
 
 
 HAPROXY
@@ -46,7 +46,7 @@ HAPROXY
 /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
 - Comprobamos que realiza el balanceo de carga de forma correcta.
 
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica3/haproxy.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica3/haproxy.png)
 
 
 

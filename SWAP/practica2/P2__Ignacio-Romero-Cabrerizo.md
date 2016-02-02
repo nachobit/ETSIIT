@@ -23,7 +23,7 @@ ssh-copy-id -i .ssh/id_dsa.pub root@10.211.55.26
 
 ssh 10.211.55.26 -l root
 
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica2/ssh1.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica2/ssh1.png)
 
 **Estando conectados a la máquina1 desde la máquina2, comprobamos que se han copiado las claves en (/root/.ssh):**
 

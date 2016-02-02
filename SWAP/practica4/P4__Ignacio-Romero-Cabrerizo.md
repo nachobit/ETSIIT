@@ -9,7 +9,7 @@
 - Para poder sacar una conclusión "más cercana a la realidad" los test se han realizado 10 veces sobre la máquina 1 y la granja web con ambas herramientas.
 
 - Para forzar una carga mayor en los servidores, incorporamos un script PHP en /var/www/ en ambas máquinas servidoras con el fin de generar dicha carga superior en el servidor y la granja web:
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/granja1.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica4/granja1.png)
 
 
 *Herramientas usadas:*
@@ -30,7 +30,7 @@ La ejecución de ab ha sido la siguiente:
 	-c 200: realiza las peticiones de 200 en 200 (concurrencia)
 
 Benchmarking usando la herramienta ab:
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/ab1_mac.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica4/ab1_mac.png)
 
 Los valores a tener en cuenta con la herramienta ab por su interés han sido:
 * Time taken for test
@@ -46,7 +46,7 @@ La ejecución de Siege ha sido la siguiente:
 	-concurrencia por defecto: 15
 
 Benchmarking usando la herramienta Siege:
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/siege1.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica4/siege1.png)
 
 Los valores a tener en cuenta con la herramienta ab por su interés han sido:
 * Elapsed Time
@@ -55,11 +55,11 @@ Los valores a tener en cuenta con la herramienta ab por su interés han sido:
 * Longest Transaction
 
 Por tanto, usando una concurrencia de 15 usuarios(valor por defecto) tras la ejecución durante 60 segundos como se muestra en la anterior captura, obtenemos los siguientes resultados:
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/siege2.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica4/siege2.png)
 
 
 En la siguiente tabla se muestran los resultados obtenidos tras realizar la batería de pruebas en el servidor 10 veces:
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/ssolo.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica4/ssolo.png)
 
 
 ### Batería de pruebas ###
@@ -72,7 +72,7 @@ La ejecución de siege ha sido la siguiente:
 ***siege -b -t60S -v http://10.211.55.28/f.php***
 
 En la siguiente tabla se muestran los resultados obtenidos tras realizar la batería de pruebas en la granja web 10 veces:
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/nginx.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica4/nginx.png)
 
 ### Batería de pruebas ###
 **Granja WEB con HAPROXY**
@@ -86,15 +86,15 @@ La ejecución de siege ha sido la siguiente:
 ***siege -b -t60S -v http://10.211.55.28/f.php***
 
 En la siguiente tabla se muestran los resultados obtenidos tras realizar la batería de pruebas en la granja web 10 veces:
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/haproxy.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica4/haproxy.png)
 
 
 ###Aquí se muestran los gráficos resultantes con la MEDIA para los atributos seleccionados (antes mencionados) a analizar: ###
 
 *Para ab:*
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/barra1.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica4/barra1.png)
 
 *Para SIEGE*
-![img](https://github.com/nachobit/ETSIIT/blob/master/swap1415/practica4/barra2.png)
+![img](https://github.com/nachobit/ETSIIT/blob/master/SWAP/practica4/barra2.png)
 
 En resumen, como se puede observar en los gráficos, la granja web balanceada es capaz de realizar ***más peticiones por segundo y en un tiempo menor***.
