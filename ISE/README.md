@@ -15,5 +15,4 @@
 	
 ###Temario Práctico:###	Práctica1: Instalación virtualizada de SO en servidores.	Práctica2: Instalación y configuración básica de servicios.
 	Práctica3: Monitorización y profiling de la actividad de un servidor.	Práctica4: Benchmarking de servidores.	Práctica5: Sintonización del rendimiento de servidores.  
-	Seminario 1: Recomendaciones para la administración y el mantenimiento de servidores.
-	Seminario 2: Elaboración de pliegos de prescripciones técnicas.
+	Seminario 1: Recomendaciones para la administración y el mantenimiento de servidores.	Seminario 2: Elaboración de pliegos de prescripciones técnicas.
