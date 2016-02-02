@@ -1,0 +1,7 @@
+##Diseño y desarrollo de Sistemas de Información##
+
+###Objetivos:###
+Diseño de Bases de datos. (Diseño relacional, Diseño orientado a objetos). Desarrollo de Aplicaciones en Sistemas de Información (Introducción a la programación web.Sistemas de Información basados en Web.)###Temario Teórico:###	- Tema 1. Introducción a los Sistemas de Información.		- Definición y descripción general		- Niveles de los Sistemas de Información Empresarial: Operativo, gerencial y de planificación.		- Sistemas de Información a nivel operativo OLTP (procesamiento de transacciones en línea). ERP (planificación de recursos empresariales) y CRM (gestión de la relación con los clientes).	- Tema 2. Diseño conceptual de sistemas de información basados en bases de datos		- Metodología para el diseño conceptual		- Herramientas para el modelado	- Tema 3. Diseño en Bases de Datos Relacionales		- Modelo de datos relacional		- Diseño lógico relacional	- Tema 4. Normalización y Diseño Físico		- Teoría de dependencias funcionales y normalización		- Diseño físico relacional
+	
+###Temario Práctico:###Familiarización y uso de herramientas para el desarrollo de Sistemas de Información P2) Proyecto de Sistema de Información:
+	- Requerimientos y Especificación de Proyecto de S.I.: +) Diseño del Sistema de Información	- Implantación del S. I.
